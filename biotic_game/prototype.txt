@@ -1,0 +1,18 @@
+1. detect Euglena in a video feed (microscope camera or recorded video)
+2. track their position and movement direction (2D)
+3. plot their trajectories in live
+4. store data to check if they are moving towards a light source
+
+Tools
+- OpenCV > image processing and tracking
+- Matplotlib > visualisation
+
+Sources: MP4, AVI, webcam
+
+Issues
+- prioritise organisms who move and are well in focus
+> use Laplacian variance (focus measure)
+low values (== blurry) will be ignored
+
+- to prioritise moving organisms we can compare a few consequent frames 
+and exclude low displacement

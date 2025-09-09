@@ -1,0 +1,30 @@
+______cv2.VideoCapture_____
+DEVICES
+0 -> default camera (ex: built-in web cam)
+1 -> second camera (USB, microscope)
+2,3,.. other connected cameras
+
+VIDEOS
+name (ex: "video.mp4")
+path ("ex: C:/path/to/video.avi")
+
+STREAMING
+rtsp, http,..
+ex: "rtsp://username:password@ip:port/stream"
+used also to get live iPhoen camera
+options
+- app for streaming > wifi
+
+1. app (ex: iriun camera)
+2. use the iPhone as IP camera ("http://ip_address/video") 
+or virtual webcam (1)
+
+GSTREAMER
+cv2.VideoCapture("gst-launch-1.0 ...", cv2.CAP_GSTREAMER)
+for high performance cameras 
+
+
+set properties:
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
+cap.set(cv2.CAP_PROP_FPS, 30)
